@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet } from "react-native"
+import { FlatList } from "react-native"
 import GameCard from "./GameCard"
 
 type Game = {
@@ -7,17 +7,15 @@ type Game = {
 	art: string
 }
 
-const styles = StyleSheet.create({
-	grid: {}
-})
-
 const GameCardGrid = ({ library }: { library: Array<Game> }) => (
 	<FlatList
 		data={library}
 		renderItem={({ item }) => <GameCard {...item} />}
 		keyExtractor={(item) => item.id}
 		numColumns={5}
-		style={{ height: "100%", width: "100%" }}
+		contentContainerStyle={{ padding: 40, paddingBottom: 0 }}
+		columnWrapperStyle={{ gap: 40, marginBottom: 40 }}
+		showsVerticalScrollIndicator={false}
 	/>
 )
 

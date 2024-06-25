@@ -9,19 +9,16 @@ type Game = {
 
 const styles = StyleSheet.create({
 	card: {
-		width: 200,
-		height: 200,
-		margin: 5,
-		borderRadius: 10,
-		overflow: "hidden"
+		width: 175,
+		height: 275
 	},
 	selectedCard: {
-		borderWidth: 2,
-		borderColor: "yellow"
+		// borderWidth: 2,
+		// borderColor: "yellow"
 	},
 	image: {
-		width: "100%",
-		height: "100%"
+		width: 175,
+		height: 275
 	}
 })
 

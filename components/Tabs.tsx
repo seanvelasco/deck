@@ -38,16 +38,21 @@ const Tabs = ({ tabs }: { tabs: Array<Tab> }) => {
 		<View
 			style={{
 				flexDirection: "row",
-				alignItems: "center"
+				alignItems: "center",
+				paddingLeft: 20,
+				paddingRight: 20
 			}}
 		>
-			<Pressable>L1</Pressable>
-			<ScrollView horizontal={true}>
+			{/* <Pressable>L1</Pressable> */}
+			<ScrollView
+				horizontal={true}
+				showsHorizontalScrollIndicator={false}
+			>
 				{tabs.map((tab) => (
 					<PillButton {...tab} />
 				))}
 			</ScrollView>
-			<Pressable>R1</Pressable>
+			{/* <Pressable>R1</Pressable> */}
 		</View>
 	)
 }

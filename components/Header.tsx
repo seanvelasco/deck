@@ -1,16 +1,20 @@
-import { View } from "react-native"
+import { View, StyleSheet } from "react-native"
 import SearchInput from "./SearchInput"
 import MenuBar from "./MenuBar"
 
+const styles = StyleSheet.create({
+	header: {
+		flexDirection: "row",
+		alignContent: "space-between",
+		width: "100%",
+		alignItems: "center",
+		paddingLeft: 10,
+		paddingRight: 10
+	}
+})
+
 const Header = () => (
-	<View
-		style={{
-			flexDirection: "row",
-			alignContent: "space-between",
-			width: "100%",
-			alignItems: "center"
-		}}
-	>
+	<View style={styles.header}>
 		<SearchInput />
 		<MenuBar />
 	</View>
